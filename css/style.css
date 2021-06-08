@@ -1,0 +1,39 @@
+main img {
+  width: 100px;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+
+p {
+  line-height: 1.5;
+}
+
+
+
+main section{
+  background-color: #f3f0d7;
+}
+
+
+h1 {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+main section:nth-child(1) p {
+  text-indent: 50px; 
+   margin-left: 50px; 
+}
+
+main section:nth-child(2) p {
+  text-indent: 50px; 
+   margin-left: 50px; 
+}
