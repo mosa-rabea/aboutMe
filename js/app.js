@@ -1,124 +1,204 @@
 'use strict';
-
 let userName = prompt('hi hi hi hi hi welcome ');
 alert('Welcome  (' + userName + ') - i hope you will enjoy in this page - i will ask you about my self');
 
-let myName = prompt('my name is mousa?').toLowerCase();
-if (myName === 'yes' || myName === 'y') {
-  alert('sure this is my name ^^');
-
-  // console.log('T');
-}
-else if (myName === 'n' || myName === 'no') {
+/*let myName= prompt('my name is mousa?');
+if(myName.toLowerCase() ==='y' || myName.toLowerCase() ==='yes')
+  {
+    alert('sure this is my name ^^');
+  console.log('T');
+  
+} 
+ else if(myName.toLowerCase() ==='n' || myName.toLowerCase() ==='no')
+{
   alert('why no look at the pic');
-
+  
 }
-else { alert(' you should answer by y or n'); }
-
-
-
-let favanime = prompt('death note is my best anime ?').toLowerCase();
-if (favanime === 'y' || favanime === 'yes') {
+ else{ alert(' you should answer by y or n'); }
+ 
+ 
+ 
+let favanime= prompt('death note is my best anime ?');
+if(favanime.toLowerCase() ==='y' || favanime.toLowerCase() ==='yes')
+  {
   alert('i hope you watched it ');
-
-}
-else if (favanime === 'no' || favanime === 'n') {
+  
+} 
+else if(favanime.toLowerCase() ==='no' || favanime.toLowerCase() ==='n')
+{
   alert('ooops');
-
+  
 }
+{
 
+console.log(' T');}
 
-// console.log(' T');
+{ alert(' you should answer by yes or no');}
 
-else { alert(' you should answer by yes or no'); }
-
-
-let favsport = prompt('My favorite sport is football?').toLowerCase();
-if (favsport === 'yes' || favsport === 'y') {
-  alert('oops , no is not true  ');
-
-
-}
-else if (favsport === 'no' || favsport === 'n') {
-  alert('this is clearly true');
-}
-else {
+ 
+let favsport= prompt('My favorite sport is football?');
+if(favsport.toLowerCase() ==='yes' || favsport.toLowerCase() ==='y')
+{
+    alert('oops , no is not true  ');
+    
+    
+  } 
+  else if(favsport.toLowerCase() ==='no' || favsport.toLowerCase() ==='n')
+  { alert('this is clearly true');  }
+  console.log('T');
+ 
+  let favColor= prompt('White is My fav color?');
+  if(favColor.toLowerCase() ==='y' || favColor.toLowerCase() ==='yes')
+  {
+    alert('sure');
+  
+    
+  }
+   console.log(' T');
+    if(favColor.toLowerCase() ==='no' || favColor.toLowerCase() ==='n')
+  {
+    alert('oops ');
+    
+  }
+else{
   alert('you must answer just y or n');
 }
-// console.log('T');
 
-let favColor = prompt('White is My fav color?').toLowerCase();
-if (favColor === 'y' || favColor === 'yes') {
-  alert('sure');
+  let favename= prompt('mohammed is super best name i hear?');
+  if(favename.toLowerCase() ==='yes' || favename.toLowerCase() ==='y')
+  {
+    alert('عليه الصلاه والسلام ');
+    
+    
 }
-//  console.log(' T');
-else if (favColor === 'no' || favColor === 'n') {
-  alert('oops ');
-}
-else {
-  alert('you must answer just y or n');
-}
-
-let favName = prompt('mohammed is super best name i hear?').toLowerCase();
-if (favName === 'yes' || favName === 'y') {
-  alert('عليه الصلاه والسلام ');
-}
-// console.log('T');
-else if (favName === 'no' || favName === 'n') {
+console.log('T');
+  if(favename.toLowerCase() ==='no' || favename.toLowerCase() ==='n')
+{
   alert('why no , this is the greatest one in the world ');
-
+  
 }
-else {
+else{
   alert('you should answer by yes or no');
+  
 }
-
-
-for (let i = 0; i < 4; i++) {
-  let age = Number(prompt('how old are me ?'));
-  if (age > 27) {
-    alert('oops too high,Try to guess again');
-  } else if (age < 27) {
-    alert('no no too low,Try to guess again');
-
-
-  } else {
-    alert('ya man this is my age ^-^');
+alert('nice to meet you ^_^ ${userName}' ); */
+let yesCount = 0;
+let noCount = 0;
+function theGuessingGames(answer) {
+  if (answer.toLowerCase() === 'YES' || answer.toLowerCase() === 'Y') {
+    yesCount++;
+    alert('correct answer ');
     score++;
-    break;
   }
-  if (i == 3) { alert('you could not guess my age , I am 27 years old'); }
-}
-
-
-
-for (let x = 0; x < 6; x++) {
-  let Richone = ['Jeff Bezos', 'Elon Musk', 'Bill Gates', 'Mark Zuckerberg', 'Larry Page'];
-  let guessrich = prompt('Can you guess richone in my life ? \n give me name please').toLowerCase();
-
-  if (guessrich === Richone[0] || guessrich === Richone[1] || guessrich === Richone[2] || guessrich == Richone[3] || guessrich == Richone[4]) {
-    alert('sure ');
-    alert('i will come a rich one from this name [Jeff Bezos, Elon Musk , Bill Gates ,Mark Zuckerberg, Larry Page]');
-    console.log(' true');
-    score++;
-    break;
+  else if (answer.toLowerCase() === 'NO' || answer.toLowerCase() === 'N') {
+    noCount++;
+    alert('Wrong answer ');
   }
-
   else {
-    alert(' please try again')
+    alert('invalid answer please type, yes , y , no , n ');
+  }
+}
+let conf1;
+switch (conf1) {
+  case true:
+    {
+      let conf2 = confirm(" please use answer with Just yes or no ");
+
+
+      let myName = prompt("my name is mousa?").toLowerCase();
+      theGuessingGames(myName);
+
+      let favanime = prompt("death note is my best anime ").toLowerCase();
+      theGuessingGames(favanime);
+
+      let favsport = prompt(" My favorite sport is football?").toLowerCase();
+      theGuessingGames(favsport);
+
+      let favColor = prompt("White is My fav color?").toLowerCase();
+
+      theGuessingGames(favColor);
+
+
+
+      let favename = prompt("  mohammed is super best name i hear?").toLowerCase();
+
+      theGuessingGames(favename);
+
+
+
+      console.log(yesCount);
+      console.log(noCount);
+      break;
+
+
+
+    }
+  case false:
+    {
+      alert('ops !!')
+    }
+
+
+}
+let score = 0;
+let count = 0;
+function myAge() {
+  for (let i = 0; i < 4; i++) {
+    let myAge = prompt('can you guess how old am i ? ');
+
+    if (myAge == 27) {
+      alert("You are incredible , thats correct answer ");
+      score++;
+      break;
+
+    }
+    else if (myAge < 27) {
+      alert("your answer(" + myAge + ') its less than correct answer');
+      count++
+    }
+    else {
+      alert("your answer(" + myAge + ') its more than correct answer');
+      count++;
+    }
+
+  }
+
+  if (count == 4) {
+    alert('Sorry, your chances are exhausted.\n The correct answer is 27 years');
+  }
+}
+
+myAge();
+
+
+
+
+let favaname = ['mosa', 'mohemmed', 'jameel', 'rabea', 'ana
+'];
+let status;
+
+function favor(ri) {
+  for (let i = 0; i < 6; i++) {
+    let theGuessingGames = prompt('Can you guess my favorite name? \n Please type a name').toLowerCase();
+
+    for (let j = 0; j < ri.length; j++) {
+      if (ri[j] === theGuessingGames.toLocaleLowerCase()) {
+        alert(" thats correct answer ");
+        score++;
+        status = true;
+        break;
+
+      }
+    }
+
+    if (status) {
+
+      break;
+    }
 
 
   }
 
-  if (x == 5) { alert('the richone is [Jeff Bezos, Elon Musk , Bill Gates ,Mark Zuckerberg, Larry Page]') };
-
+  return ri;
 }
-
-
-alert(`Thank you ${userName} Your score is = ${score}/7 `)
-console.log('your score =', score)
-
-
-
-
-
-
+alert('my favorite name is  \n' + favor(favename));
