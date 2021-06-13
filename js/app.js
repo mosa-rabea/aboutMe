@@ -2,7 +2,7 @@
 let userName = prompt('hi hi hi hi hi welcome ');
 alert('Welcome  (' + userName + ') - i hope you will enjoy in this page - i will ask you about my self');
 
-/*let myName= prompt('my name is mousa?');
+let myName= prompt('my name is mousa?');
 if(myName.toLowerCase() ==='y' || myName.toLowerCase() ==='yes')
   {
     alert('sure this is my name ^^');
@@ -81,23 +81,21 @@ else{
   alert('you should answer by yes or no');
   
 }
-alert('nice to meet you ^_^ ${userName}' ); */
-let yesCount = 0;
-let noCount = 0;
+alert('nice to meet you ^_^ ${userName}' ); 
+/*
 function theGuessingGames(answer) {
-  if (answer.toLowerCase() === 'YES' || answer.toLowerCase() === 'Y') {
-    yesCount++;
+  if (answer === 'yes' || answer === 'y') {
+
     alert('correct answer ');
     score++;
   }
-  else if (answer.toLowerCase() === 'NO' || answer.toLowerCase() === 'N') {
-    noCount++;
+  else if (answer === 'no' || answer === 'n') {
     alert('Wrong answer ');
   }
   else {
     alert('invalid answer please type, yes , y , no , n ');
   }
-}
+
 let conf1;
 switch (conf1) {
   case true:
@@ -139,7 +137,8 @@ switch (conf1) {
     }
 
 
-}
+}*/
+
 let score = 0;
 let count = 0;
 function myAge() {
@@ -168,13 +167,13 @@ function myAge() {
   }
 }
 
+
 myAge();
 
 
 
 
-let favaname = ['mosa', 'mohemmed', 'jameel', 'rabea', 'ana
-'];
+let favaname = ['mosa', 'mohemmed', 'jameel', 'rabea', 'ana'];
 let status;
 
 function favor(ri) {
@@ -190,15 +189,8 @@ function favor(ri) {
 
       }
     }
-
-    if (status) {
-
-      break;
-    }
-
-
   }
 
   return ri;
 }
-alert('my favorite name is  \n' + favor(favename));
+//alert('my favorite name is  \n' + favor(favename));
