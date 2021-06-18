@@ -3,13 +3,14 @@ let userName = prompt('hi hi hi hi hi welcome ');
 alert('Welcome  (' + userName + ') - i hope you will enjoy in this page - i will ask you about my self');
 
 let myName= prompt('my name is mousa?');
-if(myName.toLowerCase() ==='y' || myName.toLowerCase() ==='yes')
+myName=myName.toLowerCase();
+if(myName ==='y' || myName ==='yes')
   {
     alert('sure this is my name ^^');
-  console.log('T');
+
   
 } 
- else if(myName.toLowerCase() ==='n' || myName.toLowerCase() ==='no')
+ else if(myName==='n' || myName ==='no')
 {
   alert('why no look at the pic');
   
@@ -19,43 +20,46 @@ if(myName.toLowerCase() ==='y' || myName.toLowerCase() ==='yes')
  
  
 let favanime= prompt('death note is my best anime ?');
-if(favanime.toLowerCase() ==='y' || favanime.toLowerCase() ==='yes')
+favanime=favanime.toLowerCase();
+if(favanime ==='y' || favanime ==='yes')
   {
   alert('i hope you watched it ');
   
 } 
-else if(favanime.toLowerCase() ==='no' || favanime.toLowerCase() ==='n')
+else if(favanime ==='no' || favanime ==='n')
 {
   alert('ooops');
   
 }
-{
+else{
 
-console.log(' T');}
+ alert(' you should answer by yes or no');}
 
-{ alert(' you should answer by yes or no');}
 
- 
 let favsport= prompt('My favorite sport is football?');
-if(favsport.toLowerCase() ==='yes' || favsport.toLowerCase() ==='y')
+favsport=favsport.toLowerCase();
+if(favsport ==='yes' || favsport ==='y')
 {
     alert('oops , no is not true  ');
     
     
   } 
-  else if(favsport.toLowerCase() ==='no' || favsport.toLowerCase() ==='n')
+  else if(favsport ==='no' || favsport ==='n')
   { alert('this is clearly true');  }
-  console.log('T');
+ else{
+  alert(' you should answer by yes or no');
+ }
  
   let favColor= prompt('White is My fav color?');
-  if(favColor.toLowerCase() ==='y' || favColor.toLowerCase() ==='yes')
+  favColor=favColor.toLowerCase();
+  if(favColor ==='y' || favColor ==='yes')
   {
     alert('sure');
   
     
   }
-   console.log(' T');
-    if(favColor.toLowerCase() ==='no' || favColor.toLowerCase() ==='n')
+  
+    else if(favColor ==='no' || favColor ==='n')
   {
     alert('oops ');
     
@@ -65,14 +69,15 @@ else{
 }
 
   let favename= prompt('mohammed is super best name i hear?');
-  if(favename.toLowerCase() ==='yes' || favename.toLowerCase() ==='y')
+  favename=favename.toLowerCase();
+  if(favename==='yes' || favename ==='y')
   {
     alert('عليه الصلاه والسلام ');
     
     
 }
-console.log('T');
-  if(favename.toLowerCase() ==='no' || favename.toLowerCase() ==='n')
+
+ else if(favename ==='no' || favename ==='n')
 {
   alert('why no , this is the greatest one in the world ');
   
@@ -81,8 +86,8 @@ else{
   alert('you should answer by yes or no');
   
 }
-alert('nice to meet you ^_^ ${userName}' ); 
-/*
+
+
 function theGuessingGames(answer) {
   if (answer === 'yes' || answer === 'y') {
 
@@ -103,29 +108,32 @@ switch (conf1) {
       let conf2 = confirm(" please use answer with Just yes or no ");
 
 
-      let myName = prompt("my name is mousa?").toLowerCase();
+      let myName = prompt("my name is mousa?");
+      myName=myName.toLowerCase();
       theGuessingGames(myName);
 
-      let favanime = prompt("death note is my best anime ").toLowerCase();
+      let favanime = prompt("death note is my best anime ");
+      favanime=favanime.toLowerCase();
       theGuessingGames(favanime);
 
-      let favsport = prompt(" My favorite sport is football?").toLowerCase();
+      let favsport = prompt(" My favorite sport is football?");
+      favsport=favsport.toLowerCase();
       theGuessingGames(favsport);
 
-      let favColor = prompt("White is My fav color?").toLowerCase();
-
+      let favColor = prompt("White is My fav color?");
+      favColor=favColor.toLowerCase();
       theGuessingGames(favColor);
 
 
 
-      let favename = prompt("  mohammed is super best name i hear?").toLowerCase();
-
+      let favename = prompt("  mohammed is super best name i hear?");
+      favename=favename.toLowerCase();
       theGuessingGames(favename);
 
 
 
-      console.log(yesCount);
-      console.log(noCount);
+      
+      
       break;
 
 
@@ -135,21 +143,20 @@ switch (conf1) {
     {
       alert('ops !!')
     }
+    theGuessingGames();
 
-
-}*/
-
+}
+}
 let score = 0;
 let count = 0;
 function myAge() {
+  let myAge = Number(prompt('can you guess how old am i ? '));
   for (let i = 0; i < 4; i++) {
-    let myAge = prompt('can you guess how old am i ? ');
 
-    if (myAge == 27) {
+    if (myAge === 27) {
       alert("You are incredible , thats correct answer ");
-      score++;
+score++;
       break;
-
     }
     else if (myAge < 27) {
       alert("your answer(" + myAge + ') its less than correct answer');
@@ -159,7 +166,7 @@ function myAge() {
       alert("your answer(" + myAge + ') its more than correct answer');
       count++;
     }
-
+myaAge=Number(prompt('try to geusse age again'));
   }
 
   if (count == 4) {
@@ -174,23 +181,23 @@ myAge();
 
 
 let favaname = ['mosa', 'mohemmed', 'jameel', 'rabea', 'ana'];
-let status;
 
-function favor(ri) {
-  for (let i = 0; i < 6; i++) {
-    let theGuessingGames = prompt('Can you guess my favorite name? \n Please type a name').toLowerCase();
 
-    for (let j = 0; j < ri.length; j++) {
-      if (ri[j] === theGuessingGames.toLocaleLowerCase()) {
+function favor(favaname) {
+  let theGuessingGames = prompt('Can you guess my favorite name? \n Please type a name').toLowerCase();
+  outerLoop:for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < favaname.length; j++) {
+      if (favaname[j] === theGuessingGames) {
         alert(" thats correct answer ");
         score++;
-        status = true;
-        break;
-
+        break outerLoop ;
       }
-    }
+     
+    } theGuessingGames=prompt('please try again' ).toLowerCase();
   }
 
-  return ri;
+
+
 }
-//alert('my favorite name is  \n' + favor(favename));
+
+favor();
